@@ -39,27 +39,30 @@ public class HelloWorldIT {
 
     /**
      * Test of main method, of class HelloWorld.
+     * @throws java.lang.Exception
      */
     @Test
     public void testMain() throws Exception {
-        System.out.println("main");
+        System.out.println("Test Pdf Creation");
         String[] args = null;
         HelloWorld.main(args);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
      * Test of createPdf method, of class HelloWorld.
+     * @throws java.lang.Exception
      */
     @Test
     public void testCreatePdf() throws Exception {
         System.out.println("createPdf");
-        String dest = "";
+        String dest;
+        dest = "resultsIT/sresultsIT.pdf";
         HelloWorld instance = new HelloWorld();
         instance.createPdf(dest);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
     
 }
