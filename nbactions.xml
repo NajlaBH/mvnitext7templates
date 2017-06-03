@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+        <action>
+            <actionName>CUSTOM-cobertura_site</actionName>
+            <displayName>cobertura_site</displayName>
+            <goals>
+                <goal>mvn</goal>
+                <goal>cobertura:cobertura</goal>
+                <goal>site:effective-site</goal>
+            </goals>
+        </action>
+        <action>
+            <actionName>CUSTOM-site_generation</actionName>
+            <displayName>site_generation</displayName>
+            <goals>
+                <goal>site:site</goal>
+            </goals>
+        </action>
+    </actions>
