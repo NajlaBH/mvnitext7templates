@@ -1,13 +1,14 @@
-# What is this?
-
+# What is this?  
 This repository contains maven project template with :
 
 - Maven site.
 - Coverage tests:
-	* Cobertura
-	* Jacoco
-- JUnit
-- Selenium.
+	* JaCoCo Aggregate
+	* Cobertura Test Coverage
+	* Surefire Report
+	* Test JavaDocs
+
+- JavaDocs
 
 
 #### _- Authors & Maintainer_
