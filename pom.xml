@@ -5,7 +5,8 @@
     <artifactId>mvnitext7templates</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>mvnitext7templates</name>	
+    <name>mvnitext7templates</name>
+    <description>Template for maven project with code coverage.</description>	
     <url>https://najlabh.github.io/mvnitext7templates/</url>
     <repositories>
             <repository>
@@ -125,6 +126,21 @@
             <artifactId>maven-changelog-plugin</artifactId>
             <version>2.3</version>
         </dependency>
+        <dependency>
+            <groupId>org.htmlparser</groupId>
+            <artifactId>htmlparser</artifactId>
+            <version>1.6</version>
+        </dependency>
+        <dependency>
+            <groupId>xercesjarv</groupId>
+            <artifactId>xercesjarv</artifactId>
+            <version>20020712</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-net</groupId>
+            <artifactId>commons-net</artifactId>
+            <version>3.6</version>
+        </dependency>
     </dependencies>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -133,6 +149,7 @@
     </properties>
     <build>
       <defaultGoal>site:site</defaultGoal>  
+      <pluginManagement>
       <plugins>
         <!-- Site -->
                     <plugin>
@@ -203,7 +220,20 @@
              <version>0.7.9</version>
          </plugin> 
        <!-- jaccocplugin end -->
-      </plugins>   
+        <plugin>
+            <artifactId>maven-source-plugin</artifactId>
+            <version>2.1.2</version>
+            <executions>
+                <execution>
+                    <phase>deploy</phase>
+                    <goals>
+                        <goal>jar</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+      </plugins> 
+      </pluginManagement>  
     </build>
     
     <reporting>
