@@ -16,8 +16,8 @@
     </repositories>
     <dependencies>
         <dependency>
-            <groupId>com.github.NajlaBH</groupId>
-            <artifactId>mvnitext7templates</artifactId>
+            <groupId>com.github.NajlaBH.mvnitext7templates</groupId>
+            <artifactId>mvnitext7templates-1.0-SNAPSHOT.jar</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
