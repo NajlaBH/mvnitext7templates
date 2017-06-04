@@ -7,7 +7,7 @@
     <packaging>jar</packaging>
     <name>mvnitext7templates</name>
     <description>Template for maven project with code coverage.</description>	
-    <url>https://najlabh.github.io/mvnitext7templates/</url>
+    <url>https://najlabh.github.io/mvnitext7templates</url>
     <repositories>
         <repository>
             <id>jitpack.io</id>
