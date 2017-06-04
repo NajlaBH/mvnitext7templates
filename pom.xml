@@ -8,7 +8,18 @@
     <name>mvnitext7templates</name>
     <description>Template for maven project with code coverage.</description>	
     <url>https://najlabh.github.io/mvnitext7templates/</url>
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
     <dependencies>
+        <dependency>
+            <groupId>com.github.NajlaBH</groupId>
+            <artifactId>mvnitext7templates</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
         <dependency>
             <groupId>com.itextpdf</groupId>
             <artifactId>kernel</artifactId>
