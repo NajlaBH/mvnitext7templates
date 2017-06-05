@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.bhntools</groupId>
+    <groupId>com.github.NajlaBH</groupId>
     <artifactId>mvnitext7templates</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>mvnitext7templates</name>
-    <description>Template for maven project with code coverage.</description>	
-    <url>https://najlabh.github.io/mvnitext7templates</url>
+    <description>
+        Template for maven project with code coverage.
+        Package: jitpack.
+    </description>	
+    <url>https://jitpack.io/#NajlaBH/mvnitext7templates</url>
     <repositories>
         <repository>
             <id>jitpack.io</id>
@@ -16,10 +19,10 @@
     </repositories>
     <dependencies>
         <dependency>
-            <groupId>com.github.NajlaBH.mvnitext7templates</groupId>
-            <artifactId>mvnitext7templates-1.0-SNAPSHOT.jar</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
+	    <groupId>com.github.NajlaBH</groupId>
+	    <artifactId>mvnitext7templates</artifactId>
+	    <version>1.0.1-SNAPSHOT</version>
+	</dependency>
         <dependency>
             <groupId>com.itextpdf</groupId>
             <artifactId>kernel</artifactId>
@@ -151,6 +154,43 @@
       <defaultGoal>site:site</defaultGoal>  
       <pluginManagement>
       <plugins>
+      <!--deploy-->
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.2</version>
+            <configuration> <!-- Compile java 8 compatible bytecode -->
+              <source>1.8</source>
+              <target>1.8</target>
+            </configuration>
+        </plugin>
+
+        <plugin>  <!-- Create sources.jar -->
+                <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-source-plugin</artifactId>
+                    <version>2.4</version>
+                    <executions>
+                        <execution>
+                            <id>attach-sources</id>
+                            <goals>
+                                <goal>jar</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+        </plugin>
+
+        <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+        </plugin>
         <!-- Site -->
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
@@ -220,18 +260,6 @@
              <version>0.7.9</version>
          </plugin> 
        <!-- jaccocplugin end -->
-        <plugin>
-            <artifactId>maven-source-plugin</artifactId>
-            <version>2.1.2</version>
-            <executions>
-                <execution>
-                    <phase>deploy</phase>
-                    <goals>
-                        <goal>jar</goal>
-                    </goals>
-                </execution>
-            </executions>
-        </plugin>
       </plugins> 
       </pluginManagement>  
     </build>
