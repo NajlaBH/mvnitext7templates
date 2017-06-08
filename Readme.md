@@ -4,6 +4,9 @@ This repository contains maven project template with :
 
 
 - Maven site.
+link: <a href="https://najlabh.github.io/mvnitext7templates/">https://najlabh.github.io/mvnitext7templates/</a>
+
+
 - Coverage tests:
 	* JaCoCo Aggregate
 	* Cobertura Test Coverage
