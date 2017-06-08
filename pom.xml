@@ -3,26 +3,36 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.NajlaBH</groupId>
     <artifactId>mvnitext7templates</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.2-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>mvnitext7templates</name>
     <description>
         Template for maven project with code coverage.
         Package: jitpack.
+        Mvn site project under gitHub.
     </description>	
     <url>https://jitpack.io/#NajlaBH/mvnitext7templates</url>
-    <repositories>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <scm-publish.scmBranch>gh-pages</scm-publish.scmBranch>
+        <scm-publish.pubScmUrl>scm:git:git@github.com:najlabh/mvnitext7templates.git</scm-publish.pubScmUrl>
+
+        <!-- Location of where "site" documentation is output; This is for -->
+        <scm-publish.siteDocOuputDirectory>${project.build.directory}/site</scm-publish.siteDocOuputDirectory>
+
+        <!-- Overwrite from Parent Pom  -->
+        <changelog.fileUri>${changelog.github.fileUri}</changelog.fileUri>
+        <changelog.revision.fileUri>${changelog.revision.github.fileUri}</changelog.revision.fileUri>
+    </properties>
+   <repositories>
         <repository>
             <id>jitpack.io</id>
             <url>https://jitpack.io</url>
         </repository>
     </repositories>
     <dependencies>
-        <dependency>
-	    <groupId>com.github.NajlaBH</groupId>
-	    <artifactId>mvnitext7templates</artifactId>
-	    <version>1.0.1-SNAPSHOT</version>
-	</dependency>
         <dependency>
             <groupId>com.itextpdf</groupId>
             <artifactId>kernel</artifactId>
@@ -145,11 +155,6 @@
             <version>3.6</version>
         </dependency>
     </dependencies>
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-    </properties>
     <build>
       <defaultGoal>site:site</defaultGoal>  
       <pluginManagement>
