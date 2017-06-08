@@ -17,6 +17,10 @@ import static org.junit.Assert.*;
  * @author najlanetbean
  */
 public class HelloWorldIT {
+/**
+ * Simple Hello World example TESTS.
+ */
+
     
     public HelloWorldIT() {
     }
